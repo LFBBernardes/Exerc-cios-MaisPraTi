@@ -275,3 +275,34 @@ let funcionario = {
 console.log(`Nome: ${funcionario.nome}`);
 console.log(`Cargo: ${funcionario.cargo}`);
 console.log(`Salário: R$ ${funcionario.salario}`);*/
+
+//============================= 22° questão ===============================
+
+function analisarPesquisa(contagemDePessoas = 30) {
+    let totalSalario = 0;
+    let totalFilhos = 0;
+    let maiorSalario = 0;
+    let contagemSalarioBaixo = 0;
+
+   for(let i = 0; i < contagemDePessoas; i++){
+    let salario = parseFloat((Math.random()*3000).toFixed(2));
+    let filhos = Math.floor(Math.random()*5);
+    
+    totalSalario += salario;
+    totalFilhos += filhos;
+    contagemDePessoas++;
+    if (salario > maiorSalario) maiorSalario = salario;
+    if (salario <= 350) contagemSalarioBaixo++;
+}
+  
+
+    let mediaSalario = totalSalario / contagemDePessoas;
+    let mediaFilhos = totalFilhos / contagemDePessoas;
+    let percentualSalarioBaixo = (contagemSalarioBaixo / contagemDePessoas) * 100;
+
+    console.log("Média de Salário: R$ " + mediaSalario.toFixed(2));
+    console.log("Média de Número de Filhos: " + mediaFilhos.toFixed(2));
+    console.log("Maior Salário: R$ " + maiorSalario.toFixed(2));
+    console.log("Percentual com Salário ≤ R$ 350: " + percentualSalarioBaixo.toFixed(2) + "%");
+}
+analisarPesquisa();
