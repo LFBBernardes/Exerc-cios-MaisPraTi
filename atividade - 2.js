@@ -276,8 +276,78 @@ console.log(`Nome: ${funcionario.nome}`);
 console.log(`Cargo: ${funcionario.cargo}`);
 console.log(`Salário: R$ ${funcionario.salario}`);*/
 
-//============================= 22° questão ===============================
+//============================= 19° questão ===============================
+/*
+for (let i = 0; i < 5; i++) {
+    let horario = parseInt(prompt('Por favor, insira um número: '));
+    if (!isNaN(horario)) {
+        let horas = Math.floor(horario / 3600);
+        let minutos = Math.floor((horario - (horas * 3600)) / 60);
+        let segundos = horario - (horas * 3600) - (minutos * 60);
 
+        horas = horas.toString().padStart(2, '0');
+        minutos = minutos.toString().padStart(2, '0');
+        segundos = segundos.toString().padStart(2, '0');
+
+        console.log(`${horas}:${minutos}:${segundos}`);
+    } else {
+        console.log('Por favor, insira um número válido.');
+        i--;
+    }
+}*/
+
+//============================= 20° questão ===============================
+/*
+function criarNome(i) {
+    return "Funcionário " + (i + 1);
+}
+
+function calcularSalarioBruto() {
+    return Math.floor(Math.random() * 1400) + 5000;
+}
+let arrayFuncionarios = [];
+for (let i = 0; i < 80; i++) {
+    let funcionario = {
+        matricula: i + 1,
+        nome: criarNome(i),
+        salarioBruto: calcularSalarioBruto()
+    };
+    arrayFuncionarios.push(funcionario);
+}
+function calcularContracheque(funcionario) {
+    let descontoINSS = funcionario.salarioBruto * 0.12;
+    let salarioLiquido = funcionario.salarioBruto - descontoINSS;
+
+    console.log("Matrícula: " + funcionario.matricula);
+    console.log("Nome: " + funcionario.nome);
+    console.log("Salário bruto: R$" + funcionario.salarioBruto.toFixed(2));
+    console.log("Dedução INSS: R$" + descontoINSS.toFixed(2));
+    console.log("Salário líquido: R$" + salarioLiquido.toFixed(2));
+    console.log("-----------------------------");
+}
+for (let i = 0; i < arrayFuncionarios.length; i++) {
+    calcularContracheque(arrayFuncionarios[i]);
+}*/
+
+//============================= 21° questão ===============================
+/*
+function calcularPesoIdeal (altura, sexo){
+    let pesoIdeal;
+    if (sexo === 'masculino'){
+        pesoIdeal = (72.7 * altura - 58).toFixed(2);
+    } else if (sexo === 'feminino') {
+        pesoIdeal = (62.1 * altura - 44.7).toFixed(2);
+    } else {
+        return "Por favor, insira 'masculino' ou 'feminino' para o sexo.";
+    }
+    return pesoIdeal;
+}
+//Exemplos
+console.log(calcularPesoIdeal(1.80, 'masculino'));
+console.log(calcularPesoIdeal(1.65, 'feminino'));*/
+
+//============================= 22° questão ===============================
+/*
 function analisarPesquisa(contagemDePessoas = 30) {
     let totalSalario = 0;
     let totalFilhos = 0;
@@ -305,4 +375,135 @@ function analisarPesquisa(contagemDePessoas = 30) {
     console.log("Maior Salário: R$ " + maiorSalario.toFixed(2));
     console.log("Percentual com Salário ≤ R$ 350: " + percentualSalarioBaixo.toFixed(2) + "%");
 }
-analisarPesquisa();
+analisarPesquisa();*/
+
+//============================= 23° questão ===============================
+/*
+const matriz = 7;
+const matrizIdentidade = [];
+for (let i = 0; i < matriz; i++) {
+    const linha = [];
+    for (let j = 0; j < matriz; j++) {
+        if (i === j) {
+            linha.push(1);
+        } else {
+            linha.push(0);
+        }
+    }
+    matrizIdentidade.push(linha);
+}
+for (let i = 0; i < matriz; i++) {
+    console.log(matrizIdentidade[i]);
+}
+*/
+
+//============================= 24° questão ===============================
+/*
+const linhas = 6;
+const colunas = 8;
+function getNumeroAleatorio(minimo, maximo) {
+    return Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+}
+const matrizM = [];
+for (let i = 0; i < linhas; i++) {
+    const linha = [];
+    for (let j = 0; j < colunas; j++) {
+        linha.push(getNumeroAleatorio(-10, 10));
+    }
+    matrizM.push(linha);
+}
+const vetorC = [];
+for (let i = 0; i < linhas; i++) {
+    let contagemNegativos = 0;
+    for (let j = 0; j < colunas; j++) {
+        if (matrizM[i][j] < 0) {
+            contagemNegativos++;
+        }
+    }
+    vetorC.push(contagemNegativos);
+}
+console.log("Matriz M:");
+for (let i = 0; i < linhas; i++) {
+    console.log(matrizM[i]);
+}
+console.log("Vetor C:");
+console.log(vetorC);
+*/
+
+//============================= 25° questão ===============================
+/*
+function criarMatriz(linhas, colunas) {
+    let matriz = [];
+    for (let i = 0; i < linhas; i++) {
+      let linha = [];
+      for (let j = 0; j < colunas; j++) {
+        linha.push(Math.floor((Math.random() * 100)));
+      }
+      matriz.push(linha);
+    }
+    return matriz;
+  }
+  function somarColunas(matriz) {
+    let somaColunas = [];
+    for (let j = 0; j < matriz[0].length; j++) {
+      somaColunas[j] = 0; 
+      for (let i = 0; i < matriz.length; i++) {
+        somaColunas[j] += (matriz[i][j]);
+      }
+    }
+    return somaColunas;
+  }
+  function imprimirMatriz(matriz) {
+    for (let i = 0; i < matriz.length; i++) {
+      console.log(matriz[i].join(' '));
+    }
+  }
+  let matriz = criarMatriz(15, 20);
+  console.log("Aqui está uma matriz de 15x20:");
+  imprimirMatriz(matriz);
+  let somaColunas = somarColunas(matriz);
+  console.log("Soma de cada coluna:");
+  for (let i = 0; i < somaColunas.length; i++) {
+    console.log(`Soma da coluna ${i + 1}: ${somaColunas[i]}`);
+  }
+  */
+
+  //============================= 26° questão ===============================
+/*
+  function criarMatriz(linhas, colunas) {
+    let matriz = [];
+    for (let i = 0; i < linhas; i++) {
+      let linha = [];
+      for (let j = 0; j < colunas; j++) {
+        linha.push(Math.floor((Math.random() * 100))); 
+      }
+      matriz.push(linha);
+    }
+    return matriz;
+  }
+  function calcularMatrizProduto(matrizA, matrizB) {
+    let linhas = matrizA.length;
+    let colunas = matrizA[0].length;
+    let matrizProduto = [];
+    for (let i = 0; i < linhas; i++) {
+      let linhaProduto = [];
+      for (let j = 0; j < colunas; j++) {
+        linhaProduto.push((parseFloat(matrizA[i][j]) *(matrizB[i][j])));
+      }
+      matrizProduto.push(linhaProduto);
+    }
+    return matrizProduto;
+  }
+  function imprimirMatriz(matriz, nome) {
+    console.log(`${nome}:`);
+    for (let i = 0; i < matriz.length; i++) {
+      console.log(matriz[i].join(' '));
+    }
+  }
+  let matrizA = criarMatriz(3, 5);
+  let matrizB = criarMatriz(3, 5);
+  let matrizP = calcularMatrizProduto(matrizA, matrizB);
+  imprimirMatriz(matrizA, "Matriz A");
+  imprimirMatriz(matrizB, "Matriz B");
+  imprimirMatriz(matrizP, "Matriz Produto P");
+  */
