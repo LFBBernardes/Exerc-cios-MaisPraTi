@@ -510,6 +510,17 @@ function criarMatriz(linhas, colunas) {
   
   //============================= 26° questão ===============================
 /*
+  function criarMatriz() {
+    let matriz = [];
+    for (let i = 0; i < 6; i++) {
+      matriz [i]= [];
+      for (let j = 0; j < 6; j++) {
+        matriz[i][j]= Math.floor((Math.random() * 100)); 
+      }
+    }
+    return matriz;
+    }   
+
 function multiplicarMatrizPorA(matriz, valorA) {
     let vetor = [];
     for (let i = 0; i < 6; i++) {
@@ -517,27 +528,23 @@ function multiplicarMatrizPorA(matriz, valorA) {
             vetor.push(matriz[i][j] * valorA);
         }
     }
-
     return vetor;
 }
-function resultado() {
-    let matriz = [ // Aqui você pode colocar os números que quiser
-        [1, 2, 3, 4, 5, 6],
-        [7, 8, 9, 10, 11, 12],
-        [13, 14, 15, 16, 17, 18],
-        [19, 20, 21, 22, 23, 24],
-        [25, 26, 27, 28, 29, 30],
-        [31, 32, 33, 34, 35, 36]
-    ];
-    let valorA = 2; // Aqui você pode trocar pelo número que preferir
+function resultado(){
+    let matriz = criarMatriz();
+    console.log('Matriz 6x6:');
+    for (let i = 0; i < 6; i++) {
+        console.log(matriz[i].join(' '));
+    }
+    let valorA = 2; // Aqui você pode colcoar o valor que preferir
     let vetor = multiplicarMatrizPorA(matriz, valorA);
-    console.log('Vetor resultante:', vetor);
+    console.log('Vetor resultante:');
+    console.log(vetor);
 }
-resultado();
-*/
+resultado();*/
 
-  //============================= 27° questão ===============================
-
+  //============================= 28° questão ===============================
+/*
   function criarMatriz() {
     let matriz = [];
     for (let i = 0; i < 10; i++) {
@@ -577,5 +584,70 @@ function resultado() {
     let somaAbaixo = somaAbaixoDiagonal(matriz);
     console.log('Soma dos elementos acima da diagonal:', somaAcima);
     console.log('Soma dos elementos abaixo da diagonal:', somaAbaixo);
+}
+resultado();*/
+
+  //============================= 29° questão ===============================
+
+  function criarMatriz() {
+    let matriz = [];
+    for (let i = 0; i < 5; i++) {
+      matriz [i]= [];
+      for (let j = 0; j < 5; j++) {
+        matriz[i][j]= Math.floor((Math.random() * 100)); 
+      }
+    } 
+    return matriz;
+  } 
+
+  function somaLinha4(matriz){
+    let soma = 0;
+    for (let j = 0; j < 5; j++) {
+        soma += matriz[4][j];
+    }
+    return soma;
+  }
+
+  function somaColuna2(matriz) {
+    let soma = 0;
+    for (let i = 0; i < 5; i++) {
+        soma += matriz[i][2];
+    }
+    return soma;
+}
+
+function somaDiagonalPrincipal(matriz) {
+    let soma = 0;
+    for (let i = 0; i < 5; i++) {
+        soma += matriz[i][i];
+    }
+    return soma;
+}
+
+function somaTodosElementos(matriz) {
+    let soma = 0;
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            soma += matriz[i][j];
+        }
+    }
+    return soma;
+}
+
+function resultado(){
+    let matriz = criarMatriz();
+    console.log('Matriz 5x5:');
+    for (let i = 0; i < 5; i++) {
+        console.log(matriz[i].join(' '));
+    }
+    let somaLinha = somaLinha4(matriz);
+    let somaColuna = somaColuna2(matriz);
+    let somaDiagonal = somaDiagonalPrincipal(matriz);
+    let somaTotal = somaTodosElementos(matriz);
+
+    console.log('Soma da linha 4:', somaLinha);
+    console.log('Soma da coluna 2:', somaColuna);
+    console.log('Soma da diagonal principal:', somaDiagonal);
+    console.log('Soma de todos os elementos da matriz:', somaTotal);
 }
 resultado();
