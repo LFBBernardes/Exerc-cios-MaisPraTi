@@ -507,3 +507,75 @@ function criarMatriz(linhas, colunas) {
   imprimirMatriz(matrizB, "Matriz B");
   imprimirMatriz(matrizP, "Matriz Produto P");
   */
+  
+  //============================= 26° questão ===============================
+/*
+function multiplicarMatrizPorA(matriz, valorA) {
+    let vetor = [];
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
+            vetor.push(matriz[i][j] * valorA);
+        }
+    }
+
+    return vetor;
+}
+function resultado() {
+    let matriz = [ // Aqui você pode colocar os números que quiser
+        [1, 2, 3, 4, 5, 6],
+        [7, 8, 9, 10, 11, 12],
+        [13, 14, 15, 16, 17, 18],
+        [19, 20, 21, 22, 23, 24],
+        [25, 26, 27, 28, 29, 30],
+        [31, 32, 33, 34, 35, 36]
+    ];
+    let valorA = 2; // Aqui você pode trocar pelo número que preferir
+    let vetor = multiplicarMatrizPorA(matriz, valorA);
+    console.log('Vetor resultante:', vetor);
+}
+resultado();
+*/
+
+  //============================= 27° questão ===============================
+
+  function criarMatriz() {
+    let matriz = [];
+    for (let i = 0; i < 10; i++) {
+      matriz [i]= [];
+      for (let j = 0; j < 10; j++) {
+        matriz[i][j]= Math.floor((Math.random() * 100)); 
+      }
+    } 
+    return matriz;
+  } 
+  function somaAcimaDiagonal(matriz) {
+    let soma = 0;
+    for (let i = 0; i < 10; i++) {
+        for (let j = i + 1; j < 10; j++) {
+            soma += matriz[i][j];
+        }
+    }
+    return soma;
+}
+function somaAbaixoDiagonal(matriz) {
+    let soma = 0;
+    for (let i = 1; i < 10; i++) {
+        for (let j = 0; j < i; j++) {
+            soma += matriz[i][j];
+        }
+    }
+    return soma;
+}
+
+function resultado() {
+    let matriz = criarMatriz();
+    console.log('Matriz 10x10:');
+    for (let i = 0; i < 10; i++) {
+        console.log(matriz[i].join(' '));
+    }
+    let somaAcima = somaAcimaDiagonal(matriz);
+    let somaAbaixo = somaAbaixoDiagonal(matriz);
+    console.log('Soma dos elementos acima da diagonal:', somaAcima);
+    console.log('Soma dos elementos abaixo da diagonal:', somaAbaixo);
+}
+resultado();
