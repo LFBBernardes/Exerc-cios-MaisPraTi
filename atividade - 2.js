@@ -588,7 +588,7 @@ function resultado() {
 resultado();*/
 
   //============================= 29° questão ===============================
-
+/*
   function criarMatriz() {
     let matriz = [];
     for (let i = 0; i < 5; i++) {
@@ -650,4 +650,94 @@ function resultado(){
     console.log('Soma da diagonal principal:', somaDiagonal);
     console.log('Soma de todos os elementos da matriz:', somaTotal);
 }
-resultado();
+resultado();*/
+
+  //============================= 30° questão ===============================
+/*
+  function criarMatriz() {
+    let matriz = [];
+    for (let i = 0; i < 5; i++) {
+      matriz [i]= [];
+      for (let j = 0; j < 5; j++) {
+        matriz[i][j]= Math.floor((Math.random() * 100)); 
+      }
+    } 
+    return matriz;
+  } 
+
+  function calcularSomas(matriz) {
+    let SL = [];
+    let SC = [];
+    for (let i = 0; i < 5; i++) {
+        SL[i] = 0;
+        SC[i] = 0;
+    }
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            SL[i] += matriz[i][j];
+            SC[j] += matriz[i][j];
+        }
+    }
+    return { SL, SC };
+}
+
+function resultado(){
+    let matriz = criarMatriz();
+    console.log('Matriz 5x5:');
+    for (let i = 0; i < 5; i++) {
+        console.log(matriz[i].join(' '));
+    }
+    let { SL, SC } = calcularSomas(matriz);
+    console.log('Vetor SL (somas das linhas):', SL);
+    console.log('Vetor SC (somas das colunas):', SC);
+}
+resultado();*/
+
+  //============================= 31° questão ===============================
+/*
+function criarMatriz() {
+    let matriz = [];
+    for (let i = 0; i < 30; i++) {
+      matriz [i]= [];
+      for (let j = 0; j < 30; j++) {
+        matriz[i][j]= Math.floor((Math.random() * 20)); 
+      }
+    } 
+    return matriz;
+  } 
+  function contarIguais(matriz, A){
+    let contador = 0;
+    let matrizX =[];
+    for (let i = 0; i < 30; i++) {
+        let linha = [];
+        for (let j = 0; j < 30; j++) {
+            if (matriz[i][j] === A) {
+                contador++;
+            } else {
+                linha.push(matriz[i][j]);
+            }
+        }
+        if (linha.length > 0) {
+            matrizX.push(linha);
+        }
+    }
+    return { contador, matrizX };
+  }
+
+  function resultado(){
+    let matrizV = criarMatriz();
+    console.log('Matriz 30x30:');
+    for (let i = 0; i < 30; i++) {
+        console.log(matrizV[i].join(' '));
+    let A = Math.floor(Math.random()*20);    
+    let { contador, matrizX } = contarIguais(matrizV, A);
+    console.log('Quantidade de valores iguais a A:', contador);
+    console.log('Matriz X (todos os elementos diferentes de A):');
+    for (let i = 0; i < matrizX.length; i++) {
+        console.log(matrizX[i].join(' '));
+    }
+  }
+}
+resultado();*/
+
+  //============================= 31° questão ===============================
