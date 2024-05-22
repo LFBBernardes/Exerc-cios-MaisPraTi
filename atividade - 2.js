@@ -740,4 +740,110 @@ function criarMatriz() {
 }
 resultado();*/
 
-  //============================= 31° questão ===============================
+  //============================= 34° questão ===============================
+/*
+  function criarMatriz() {
+    let matriz = [];
+    for (let i = 0; i < 50; i++) {
+      matriz [i]= [];
+      for (let j = 0; j < 50; j++) {
+        matriz[i][j]= Math.floor((Math.random() * 21)); 
+      }
+    } 
+    return matriz;
+  }
+
+  function calcularMultiplicacao(matriz){
+    for (let i = 0; i < 50; i++) {
+        let elementoDiagonal = matriz[i][i];
+        for (let j = 0; j < 50; j++) {
+            matriz[i][j] *= elementoDiagonal;
+        }
+    }
+    return matriz;
+  }
+
+  function resultado(){
+    let matriz = criarMatriz();
+    console.log('Matriz 50x50 original:');
+    console.table(matriz);
+    let matrizResultado = calcularMultiplicacao(matriz);
+    console.log('Matriz 50x50 após as multiplicações:');
+    console.table(matrizResultado);
+  }
+  resultado();*/
+
+    //============================= 35° questão ===============================
+/*
+    function verificarNumeroPar(num) {
+        return num % 2 === 0;
+    }
+    function resultado (){
+        let valores = [];
+        for (let i = 0; i < 30; i++) {
+            valores.push(Math.floor(Math.random() * 100) + 1);
+    }
+        let pares = [];
+        let impares = [];
+        valores.forEach(valor => {
+            if (verificarNumeroPar(valor)) {
+                pares.push(valor);  
+                if (pares.length === 5) {
+                    console.log('Vetor de Pares cheio:', pares);
+                    pares = [];
+                }
+            } else {
+                impares.push(valor);
+                if (impares.length === 5) {
+                    console.log('Vetor de Ímpares cheio:', impares);
+                    impares = [];
+                }
+            }
+        });
+        if (pares.length > 0) {
+            console.log('Vetor de Pares restante:', pares);
+        }
+        if (impares.length > 0) {
+            console.log('Vetor de Ímpares restante:', impares);
+        }
+    }
+    resultado();
+*/
+    //============================= 36° questão ===============================
+
+function sequenciaSorteada() {
+    let numeros = [];
+    while (numeros.length < 13) {
+        let numero = Math.floor(Math.random() * 60) + 1;
+        if (!numeros.includes(numero)) {
+            numeros.push(numero);
+        }
+    }
+    return numeros;
+}
+function resultado() {
+    let gabarito = sequenciaSorteada();
+    const numeroApostadores = 100;
+    for (let i = 0; i < numeroApostadores; i++) {
+        let numeroCartao = Math.floor(Math.random() * 1000) + 1;
+        let respostas = [];
+        while (respostas.length < 13) {
+            let resposta = Math.floor(Math.random() * 60) + 1;
+            if (!respostas.includes(resposta)) {
+                respostas.push(resposta);
+            }
+        }
+        let acertos = 0;
+        for (let j = 0; j < 13; j++) {
+            if (respostas[j] === gabarito[j]) {
+                acertos++;
+            }
+        }
+        console.log(`Apostador ${numeroCartao}: ${acertos} acertos`);
+        if (acertos === 13) {
+            console.log('Parabéns, tu foi o GANHADOR');
+        }
+    }
+    console.log('Gabarito:', gabarito);
+}
+resultado();
