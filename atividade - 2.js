@@ -810,7 +810,7 @@ resultado();*/
     resultado();
 */
     //============================= 36° questão ===============================
-
+/*
 function sequenciaSorteada() {
     let numeros = [];
     while (numeros.length < 13) {
@@ -846,4 +846,38 @@ function resultado() {
     }
     console.log('Gabarito:', gabarito);
 }
-resultado();
+resultado();*/
+
+    //============================= 41° questão ===============================
+/*
+    let pessoa = {
+        nome: "Fulano",
+        idade: 18
+    };
+    console.log(pessoa.idade);
+        pessoa.email = "fulano@outlook.com";
+    console.log(pessoa);    
+*/
+
+     //============================= 42° questão ===============================
+
+     const dados = {
+        nome: "Fulano",
+        idade: 18,
+        habilidades: ["JavaScript", "HTML", "CSS"],
+        endereco: "Rua dos Devs, 123",
+        telefones: [88999999999, 85999999999],
+        interesses: ["Programação", "Esportes", "Música"]
+      };
+
+      function acharArrays(obj) {
+        let resultado = {};
+        for (let chave in obj) {
+          if (Array.isArray(obj[chave])) {
+            resultado[chave] = obj[chave];
+          }
+        }
+        return resultado;
+      }
+      let arraysSomente = acharArrays(dados);
+      console.log(arraysSomente);
