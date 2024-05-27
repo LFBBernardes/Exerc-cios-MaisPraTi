@@ -848,6 +848,210 @@ function resultado() {
 }
 resultado();*/
 
+    //============================= 37° questão ===============================
+/*
+function criarGabarito() {
+    const opcoes = ['A', 'B', 'C', 'D', 'E'];
+    let gabarito = [];
+    for (let i = 0; i < 20; i++) {
+        gabarito.push(opcoes[Math.floor(Math.random() * opcoes.length)]);
+    }
+    return gabarito;
+}
+
+function gerarRespostas() {
+    const opcoes = ['A', 'B', 'C', 'D', 'E'];
+    let respostas = [];
+    for (let i = 0; i < 20; i++) {
+        respostas.push(opcoes[Math.floor(Math.random() * opcoes.length)]);
+    }
+    return respostas;
+}
+
+function main() {
+    let gabarito = criarGabarito();
+    const numeroAlunos = 50;
+    let aprovados = 0;
+    let reprovados = 0;
+    for (let i = 0; i < numeroAlunos; i++) {
+        let respostas = gerarRespostas();
+        let acertos = 0;
+        for (let j = 0; j < 20; j++) {
+            if (respostas[j] === gabarito[j]) {
+                acertos++;
+            }
+        }
+        console.log(`Aluno ${i + 1}: ${acertos} acertos`);
+        if (acertos >= 12) {
+            console.log('APROVADO');
+            aprovados++;
+        } else {
+            console.log('REPROVADO');
+            reprovados++;
+        }
+    }
+    console.log('Gabarito:', gabarito);
+    console.log(`Número de alunos aprovados: ${aprovados}`);
+    console.log(`Número de alunos reprovados: ${reprovados}`);
+}
+main();
+*/
+
+    //============================= 38° questão ===============================
+/*
+function criarVetor() {
+    let vetor = [];
+    for (let i = 0; i < 6; i++) {
+        vetor.push(Math.floor(Math.random() * 100) + 1); // Números aleatórios entre 1 e 100
+    }
+    return vetor;
+}
+
+function calcularSoma(vetor) {
+    let soma = 0;
+    for (let i = 0; i < vetor.length; i++) {
+        soma += vetor[i];
+    }
+    return soma;
+}
+
+function calcularProduto(vetor) {
+    let produto = 1;
+    for (let i = 0; i < vetor.length; i++) {
+        produto *= vetor[i];
+    }
+    return produto;
+}
+function calcularMedia(vetor) {
+    let soma = calcularSoma(vetor);
+    return soma / vetor.length;
+}
+function ordenarVetor(vetor) {
+    let ordenado = [...vetor];
+    for (let i = 0; i < ordenado.length - 1; i++) {
+        for (let j = i + 1; j < ordenado.length; j++) {
+            if (ordenado[i] > ordenado[j]) {
+                let temp = ordenado[i];
+                ordenado[i] = ordenado[j];
+                ordenado[j] = temp;
+            }
+        }
+    }
+    return ordenado;
+}
+function operarVetor(vetor, operacao) {
+    switch (operacao) {
+        case 1:
+            let soma = calcularSoma(vetor);
+            console.log('Soma dos elementos:', soma);
+            break;
+        case 2:
+            let produto = calcularProduto(vetor);
+            console.log('Produto dos elementos:', produto);
+            break;
+        case 3:
+            let media = calcularMedia(vetor);
+            console.log('Média dos elementos:', media.toFixed(2));
+            break;
+        case 4:
+            let ordenado = ordenarVetor(vetor);
+            console.log('Elementos ordenados em ordem crescente:', ordenado);
+            break;
+        case 5:
+            console.log('Vetor:', vetor);
+            break;
+        default:
+            console.log('Operação inválida');
+            break;
+    }
+}
+function main() {
+    let vetor = criarVetor();
+    console.log('Vetor lido:', vetor);
+    let operacao = Math.floor(Math.random() * 5) + 1;
+    console.log('Operação escolhida:', operacao);
+    operarVetor(vetor, operacao);
+}
+main();
+*/
+
+ //============================= 39° questão ===============================
+/*
+function criarVetor() {
+    let vetor = [];
+    for (let i = 0; i < 100; i++) {
+        vetor.push(Math.floor(Math.random() * 101) - 50);
+    }
+    return vetor;
+}
+function compactarVetor(vetor) {
+    let vetorCompacto = [];
+    for (let i = 0; i < vetor.length; i++) {
+        if (vetor[i] > 0) {
+            vetorCompacto.push(vetor[i]);
+        }
+    }
+    return vetorCompacto;
+}
+function main() {
+    let vetorA = criarVetor();
+    console.log('Vetor A:', vetorA);
+    let vetorB = compactarVetor(vetorA);
+    console.log('Vetor B (compactado):', vetorB);
+}
+main();
+*/
+
+    //============================= 40° questão ===============================
+/*
+function gerarResultadoOficial() {
+    let resultado = [];
+    while (resultado.length < 5) {
+        let numero = Math.floor(Math.random() * 60) + 1;
+        if (!resultado.includes(numero)) {
+            resultado.push(numero);
+        }
+    }
+    return resultado;
+}
+function gerarApostas() {
+    let apostas = [];
+    for (let i = 0; i < 50; i++) {
+        let aposta = [];
+        while (aposta.length < 5) {
+            let numero = Math.floor(Math.random() * 60) + 1;
+            if (!aposta.includes(numero)) {
+                aposta.push(numero);
+            }
+        }
+        apostas.push(aposta);
+    }
+    return apostas;
+}
+function verificarAposta(resultado, aposta) {
+    for (let i = 0; i < resultado.length; i++) {
+        if (!aposta.includes(resultado[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+function main() {
+    let resultadoOficial = gerarResultadoOficial();
+    console.log('Resultado Oficial da Loto:', resultadoOficial);
+    let apostas = gerarApostas();
+    for (let i = 0; i < apostas.length; i++) {
+        let aposta = apostas[i];
+        if (verificarAposta(resultadoOficial, aposta)) {
+            console.log('Aposta', i + 1, ':', aposta, '- Ganhador');
+        } else {
+            console.log('Aposta', i + 1, ':', aposta, '- Não ganhou');
+        }
+    }
+}
+main();
+*/
+
     //============================= 41° questão ===============================
 /*
     let pessoa = {
@@ -882,7 +1086,27 @@ resultado();*/
       let arraysSomente = acharArrays(dados);
       console.log(arraysSomente);*/
 
-     //============================= 44° questão ===============================
+    //============================= 43° questão ===============================
+/*
+let obj1 = {
+    nome: "Fulano",
+    idade: 25,
+    cidade: "São Paulo"
+};
+
+let obj2 = {
+    idade: 30,
+    cidade: "Rio de Janeiro",
+    email: "fulano@outlook.com"
+};
+function combinarObjetos(obj1, obj2) {
+    return { ...obj1, ...obj2 };
+}
+let objetoCombinado = combinarObjetos(obj1, obj2);
+console.log(objetoCombinado);
+*/
+     
+      //============================= 44° questão ===============================
 /*
      const obj = {
         nome: "Fulano",
@@ -907,5 +1131,50 @@ resultado();*/
       */
 
       //============================= 45° questão ===============================
+/*
+let strings = ["maça", "banana", "maça", "laranja", "banana", "maça", "banana","uva","uva"];
+function contarFrequencias(array) {
+    let frequencias = {};
+    for (let i = 0; i < array.length; i++) {
+        let string = array[i];
+        if (frequencias[string]) {
+            frequencias[string]++;
+        } else {
+            frequencias[string] = 1;
+        }
+    }
+    
+    return frequencias;
+}
+let resultado = contarFrequencias(strings);
+console.log(resultado);
+*/
 
-      
+      //============================= 46° questão ===============================
+
+let vendas = [
+    { vendedor: "Fulano", valor: 100 },
+    { vendedor: "Ciclano", valor: 200 },
+    { vendedor: "Joãozinho", valor: 150 },
+    { vendedor: "Fulano", valor: 300 },
+    { vendedor: "Joãozinho", valor: 250 }
+];
+function somarVendasPorVendedor(vendas) {
+    let totalVendasPorVendedor = {};
+    
+    for (let i = 0; i < vendas.length; i++) {
+        let venda = vendas[i];
+        let vendedor = venda.vendedor;
+        let valor = venda.valor;
+        
+        if (totalVendasPorVendedor[vendedor]) {
+            totalVendasPorVendedor[vendedor] += valor;
+        } else {
+            totalVendasPorVendedor[vendedor] = valor;
+        }
+    }
+    
+    return totalVendasPorVendedor;
+}
+let resultado = somarVendasPorVendedor(vendas);
+console.log(resultado);
