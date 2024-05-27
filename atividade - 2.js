@@ -860,7 +860,7 @@ resultado();*/
 */
 
      //============================= 42° questão ===============================
-
+/*
      const dados = {
         nome: "Fulano",
         idade: 18,
@@ -880,4 +880,32 @@ resultado();*/
         return resultado;
       }
       let arraysSomente = acharArrays(dados);
-      console.log(arraysSomente);
+      console.log(arraysSomente);*/
+
+     //============================= 44° questão ===============================
+/*
+     const obj = {
+        nome: "Fulano",
+        idade: 18,
+        habilidades: ["JavaScript", "HTML", "CSS"],
+        endereco: "Rua dos Devs, 123",
+        telefones: [88999999999, 85999999999],
+        interesses: ["Programação", "Esportes", "Música"]
+      };
+
+      function contarStrings(obj) {
+        let contagem = 0;
+        for (let propriedade in obj) {
+          if (typeof obj[propriedade] === 'string') {
+            contagem++;
+          }
+        }
+        return contagem;
+      }
+      const quantidadeStrings = contarStrings(obj);
+      console.log(quantidadeStrings);
+      */
+
+      //============================= 45° questão ===============================
+
+      
