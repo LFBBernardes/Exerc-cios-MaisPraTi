@@ -1151,7 +1151,7 @@ console.log(resultado);
 */
 
       //============================= 46° questão ===============================
-
+/*
 let vendas = [
     { vendedor: "Fulano", valor: 100 },
     { vendedor: "Ciclano", valor: 200 },
@@ -1178,3 +1178,62 @@ function somarVendasPorVendedor(vendas) {
 }
 let resultado = somarVendasPorVendedor(vendas);
 console.log(resultado);
+*/
+
+      //============================= 47° questão ===============================
+/*
+     function transformarObjeto(objeto, funcao){
+        let novoObjeto={}
+        for(let chave in objeto){
+            novoObjeto[chave] = funcao(objeto[chave]);
+        }
+        return novoObjeto;
+     }
+
+     let entradaObjeto = {
+        x:3,
+        y:5,
+        z:4
+     };
+
+     function triplicarValor(valor){
+        return valor * 3;
+     }
+     
+     let objetoModificado = transformarObjeto(entradaObjeto, triplicarValor)
+     console.log(objetoModificado);
+*/
+
+      //============================= 48° questão ===============================
+
+      let inventarioLojaA = {
+        computador: 10,
+        monitor: 50,
+        gabinete: 25,
+        mesa: 3
+      };
+       
+      let inventarioLojaB = {
+        computador: 15,
+        mouse: 20,
+        teclado: 30,
+        monitor: 10
+      };
+
+      function inventariosCombinados(inventarioLojaA, inventarioLojaB){
+        let inventariosCombinados = {};
+        for (let item in inventarioLojaA){
+            inventariosCombinados[item] = inventarioLojaA[item];
+        }
+        for (let item in inventarioLojaB){
+            if (inventariosCombinados[item]) {
+                inventariosCombinados[item] += inventarioLojaB[item];
+            } else {
+                inventariosCombinados[item] = inventarioLojaB[item];
+            }
+        }
+        return inventariosCombinados;
+      }
+
+      let totalInventarios = inventariosCombinados(inventarioLojaA, inventarioLojaB);
+      console.log (totalInventarios);
