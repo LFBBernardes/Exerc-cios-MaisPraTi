@@ -1238,3 +1238,7 @@ console.log(resultado);
       let totalInventarios = inventariosCombinados(inventarioLojaA, inventarioLojaB);
       console.log (totalInventarios);
 */
+
+      //============================= 49° questão ===============================
+
+      
