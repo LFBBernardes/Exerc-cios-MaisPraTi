@@ -1241,4 +1241,30 @@ console.log(resultado);
 
       //============================= 49° questão ===============================
 
-      
+      let transacoes = [
+        { id: 1, valor: 100, data: '08-04-2024', categoria: 'Alimentação'},
+        { id: 2, valor: 50, data: '19-03-2024', categoria: 'Transporte' },
+        { id: 3, valor: 200, data: '10-05-2024', categoria: 'Alimentação' },
+        { id: 4, valor: 150, data: '24-04-2024', categoria: 'Lazer' },
+        { id: 5, valor: 100, data: '17-04-2024', categoria: 'Transporte' },
+      ];
+
+      function arrumarTransacoes(transacoes){
+        let resultado = {};
+
+        transacoes.forEach(transacao => {
+            let categoria = transacao.categoria;
+            if (!resultado[categoria]) {
+                resultado[categoria] = {
+                    transacoes: [],
+                    subtotal: 0
+                };    
+      }
+      resultado[categoria].transacoes.push(transacao);
+      resultado[categoria].subtotal += transacao.valor;
+    });
+
+    return resultado;
+}
+let resultado = arrumarTransacoes(transacoes);
+console.log(resultado);
