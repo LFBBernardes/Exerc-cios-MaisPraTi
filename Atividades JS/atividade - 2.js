@@ -1205,7 +1205,7 @@ console.log(resultado);
 */
 
       //============================= 48° questão ===============================
-
+/*
       let inventarioLojaA = {
         computador: 10,
         monitor: 50,
@@ -1237,3 +1237,4 @@ console.log(resultado);
 
       let totalInventarios = inventariosCombinados(inventarioLojaA, inventarioLojaB);
       console.log (totalInventarios);
+*/
