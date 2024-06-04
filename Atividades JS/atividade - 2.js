@@ -468,7 +468,7 @@ function criarMatriz(linhas, colunas) {
   }
   */
 
-  //============================= 26° questão ===============================
+//============================= 26° questão ===============================
 /*
   function criarMatriz(linhas, colunas) {
     let matriz = [];
@@ -508,7 +508,7 @@ function criarMatriz(linhas, colunas) {
   imprimirMatriz(matrizP, "Matriz Produto P");
   */
   
-  //============================= 26° questão ===============================
+//============================= 26° questão ===============================
 /*
   function criarMatriz() {
     let matriz = [];
@@ -543,7 +543,7 @@ function resultado(){
 }
 resultado();*/
 
-  //============================= 28° questão ===============================
+//============================= 28° questão ===============================
 /*
   function criarMatriz() {
     let matriz = [];
@@ -587,7 +587,7 @@ function resultado() {
 }
 resultado();*/
 
-  //============================= 29° questão ===============================
+//============================= 29° questão ===============================
 /*
   function criarMatriz() {
     let matriz = [];
@@ -652,7 +652,7 @@ function resultado(){
 }
 resultado();*/
 
-  //============================= 30° questão ===============================
+//============================= 30° questão ===============================
 /*
   function criarMatriz() {
     let matriz = [];
@@ -693,7 +693,7 @@ function resultado(){
 }
 resultado();*/
 
-  //============================= 31° questão ===============================
+//============================= 31° questão ===============================
 /*
 function criarMatriz() {
     let matriz = [];
@@ -740,7 +740,7 @@ function criarMatriz() {
 }
 resultado();*/
 
-  //============================= 34° questão ===============================
+//============================= 34° questão ===============================
 /*
   function criarMatriz() {
     let matriz = [];
@@ -773,7 +773,7 @@ resultado();*/
   }
   resultado();*/
 
-    //============================= 35° questão ===============================
+//============================= 35° questão ===============================
 /*
     function verificarNumeroPar(num) {
         return num % 2 === 0;
@@ -809,7 +809,7 @@ resultado();*/
     }
     resultado();
 */
-    //============================= 36° questão ===============================
+//============================= 36° questão ===============================
 /*
 function sequenciaSorteada() {
     let numeros = [];
@@ -848,7 +848,7 @@ function resultado() {
 }
 resultado();*/
 
-    //============================= 37° questão ===============================
+//============================= 37° questão ===============================
 /*
 function criarGabarito() {
     const opcoes = ['A', 'B', 'C', 'D', 'E'];
@@ -897,7 +897,7 @@ function main() {
 main();
 */
 
-    //============================= 38° questão ===============================
+//============================= 38° questão ===============================
 /*
 function criarVetor() {
     let vetor = [];
@@ -975,7 +975,7 @@ function main() {
 main();
 */
 
- //============================= 39° questão ===============================
+//============================= 39° questão ===============================
 /*
 function criarVetor() {
     let vetor = [];
@@ -1002,7 +1002,7 @@ function main() {
 main();
 */
 
-    //============================= 40° questão ===============================
+//============================= 40° questão ===============================
 /*
 function gerarResultadoOficial() {
     let resultado = [];
@@ -1052,7 +1052,7 @@ function main() {
 main();
 */
 
-    //============================= 41° questão ===============================
+//============================= 41° questão ===============================
 /*
     let pessoa = {
         nome: "Fulano",
@@ -1063,7 +1063,7 @@ main();
     console.log(pessoa);    
 */
 
-     //============================= 42° questão ===============================
+//============================= 42° questão ===============================
 /*
      const dados = {
         nome: "Fulano",
@@ -1086,7 +1086,7 @@ main();
       let arraysSomente = acharArrays(dados);
       console.log(arraysSomente);*/
 
-    //============================= 43° questão ===============================
+//============================= 43° questão ===============================
 /*
 let obj1 = {
     nome: "Fulano",
@@ -1106,7 +1106,7 @@ let objetoCombinado = combinarObjetos(obj1, obj2);
 console.log(objetoCombinado);
 */
      
-      //============================= 44° questão ===============================
+//============================= 44° questão ===============================
 /*
      const obj = {
         nome: "Fulano",
@@ -1130,7 +1130,7 @@ console.log(objetoCombinado);
       console.log(quantidadeStrings);
       */
 
-      //============================= 45° questão ===============================
+//============================= 45° questão ===============================
 /*
 let strings = ["maça", "banana", "maça", "laranja", "banana", "maça", "banana","uva","uva"];
 function contarFrequencias(array) {
@@ -1150,7 +1150,7 @@ let resultado = contarFrequencias(strings);
 console.log(resultado);
 */
 
-      //============================= 46° questão ===============================
+//============================= 46° questão ===============================
 /*
 let vendas = [
     { vendedor: "Fulano", valor: 100 },
@@ -1180,7 +1180,7 @@ let resultado = somarVendasPorVendedor(vendas);
 console.log(resultado);
 */
 
-      //============================= 47° questão ===============================
+//============================= 47° questão ===============================
 /*
      function transformarObjeto(objeto, funcao){
         let novoObjeto={}
@@ -1204,7 +1204,7 @@ console.log(resultado);
      console.log(objetoModificado);
 */
 
-      //============================= 48° questão ===============================
+//============================= 48° questão ===============================
 /*
       let inventarioLojaA = {
         computador: 10,
@@ -1239,8 +1239,8 @@ console.log(resultado);
       console.log (totalInventarios);
 */
 
-      //============================= 49° questão ===============================
-
+//============================= 49° questão ===============================
+/*
       let transacoes = [
         { id: 1, valor: 100, data: '08-04-2024', categoria: 'Alimentação'},
         { id: 2, valor: 50, data: '19-03-2024', categoria: 'Transporte' },
@@ -1267,4 +1267,139 @@ console.log(resultado);
     return resultado;
 }
 let resultado = arrumarTransacoes(transacoes);
-console.log(resultado);
+console.log(JSON.stringify(resultado, null, 2));
+*/
+
+//============================= 50° questão ===============================
+
+let hoteis = [];
+let reservas = [];
+let proximoIdHotel = 1;
+let proximoIdReserva = 1;
+
+function adicionarHotel(nome, cidade, quartosTotais) {
+    let hotel = {
+        id: proximoIdHotel++,
+        nome: nome,
+        cidade: cidade,
+        quartosTotais: quartosTotais,
+        quartosDisponiveis: quartosTotais
+    };
+    hoteis.push(hotel);
+    console.log(`Hotel ${nome} adicionado com sucesso!`);
+}
+
+function buscarHoteisPorCidade(cidade) {
+    let hoteisEncontrados = hoteis.filter(hotel => hotel.cidade === cidade);
+    if (hoteisEncontrados.length === 0) {
+        console.log(`Nenhum hotel encontrado na cidade ${cidade}.`);
+    } else {
+        console.log(`Hotéis encontrados em ${cidade}:`);
+        console.table(hoteisEncontrados);
+    }
+}
+
+function fazerReserva(idHotel, nomeCliente) {
+    let hotel = hoteis.find(h => h.id === idHotel);
+    if (hotel) {
+        if (hotel.quartosDisponiveis > 0) {
+            let reserva = {
+                idReserva: proximoIdReserva++,
+                idHotel: idHotel,
+                nomeCliente: nomeCliente
+            };
+            reservas.push(reserva);
+            hotel.quartosDisponiveis--;
+            console.log(`Reserva feita com sucesso para o cliente ${nomeCliente} no hotel ${hotel.nome}.`);
+        } else {
+            console.log(`Não há quartos disponíveis no hotel ${hotel.nome}.`);
+        }
+    } else {
+        console.log(`Hotel com ID ${idHotel} não encontrado.`);
+    }
+}
+
+function cancelarReserva(idReserva) {
+    let reservaIndex = reservas.findIndex(r => r.idReserva === idReserva);
+    if (reservaIndex !== -1) {
+        let reserva = reservas[reservaIndex];
+        let hotel = hoteis.find(h => h.id === reserva.idHotel);
+        if (hotel) {
+            hotel.quartosDisponiveis++;
+            reservas.splice(reservaIndex, 1);
+            console.log(`Reserva ${idReserva} cancelada com sucesso.`);
+        }
+    } else {
+        console.log(`Reserva com ID ${idReserva} não encontrada.`);
+    }
+}
+
+function listarReservas() {
+    if (reservas.length === 0) {
+        console.log("Nenhuma reserva encontrada.");
+    } else {
+        console.log("Lista de reservas:");
+        reservas.forEach(reserva => {
+            let hotel = hoteis.find(h => h.id === reserva.idHotel);
+            console.log(`Reserva ID: ${reserva.idReserva}, Cliente: ${reserva.nomeCliente}, Hotel: ${hotel.nome}, Cidade: ${hotel.cidade}`);
+        });
+    }
+}
+
+function mostrarMenu() {
+    console.log(`
+        1. Adicionar hotel
+        2. Buscar hotéis por cidade
+        3. Fazer reserva
+        4. Cancelar reserva
+        5. Listar reservas
+        6. Sair
+    `);
+}
+
+function resultado() {
+    let opcao;
+    do {
+        mostrarMenu();
+        opcao = parseInt(prompt('Escolha uma opção: '));
+
+        switch (opcao) {
+            case 1:
+                let nome = prompt('Nome do hotel: ');
+                let cidade = prompt('Cidade do hotel: ');
+                let quartosTotais = parseInt(prompt('Número total de quartos: '));
+                adicionarHotel(nome, cidade, quartosTotais);
+                break;
+
+            case 2:
+                let cidadeBusca = prompt('Cidade: ');
+                buscarHoteisPorCidade(cidadeBusca);
+                break;
+
+            case 3:
+                let idHotelReserva = parseInt(prompt('ID do hotel: '));
+                let nomeCliente = prompt('Nome do cliente: ');
+                fazerReserva(idHotelReserva, nomeCliente);
+                break;
+
+            case 4:
+                let idReserva = parseInt(prompt('ID da reserva: '));
+                cancelarReserva(idReserva);
+                break;
+
+            case 5:
+                listarReservas();
+                break;
+
+            case 6:
+                console.log('Saindo...');
+                break;
+
+            default:
+                console.log('Opção inválida!');
+                break;
+        }
+    } while (opcao !== 6);
+}
+
+resultado();
